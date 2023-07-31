@@ -21,6 +21,11 @@
   display: none;
 }
 
+ul {
+  animation: show-menu 750ms ease-in-out;
+  transform-origin: top;
+}
+
 ul.dropdown-menu li:hover {
   background: rgb(47, 46, 46);
 }
@@ -29,4 +34,16 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
+@keyframes show-menu {
+  from {
+    transform: scaleY(0);
+  }
 
+  80% {
+    transform: scaleY(1.2);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
